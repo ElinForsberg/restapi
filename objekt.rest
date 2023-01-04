@@ -1,5 +1,11 @@
 GET http://localhost:3000/objects
+
 ###
+
+GET http://localhost:3000/objects/byid/2345678
+
+###
+
 POST http://localhost:3000/objects
 Content-Type: application/json
 
@@ -8,7 +14,7 @@ Content-Type: application/json
         "location": "Long beach",
         "bedrooms": 1,
         "price": 2200000,
-        "id": 5678901
+        "id": "5678901"
     }
 
 ###
@@ -23,9 +29,8 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/objects/5678901
+DELETE http://localhost:3000/objects/1234567
 
 
 ###
 
-GET http://localhost:3000/objects/5678901

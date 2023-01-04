@@ -44,6 +44,21 @@ fs.writeFile("objekt.json", JSON.stringify(myObject,null,2), (err) => {
    //res.status(201).send(myObject)
 })
 
+app.get('/objects/byid/:id', (req,res) =>{
+  fs.readFile("objekt.json", function(err,data){
+    if(err){
+      console.log(err);
+      res.status(404).send("filen finns inte")
+    }
+    let myObject = JSON.parse(data)
+    const { id } = req.params;
+    const findObject = myObject.find((object)=>object.id=== id);
+    if(!findObject) res.status(404).send("Huset finns inte");
+    
+    res.send(findObject);
+  });
+});
+
 app.put('/objects/:id', function(req,res){
    
 
@@ -74,7 +89,7 @@ app.delete('/objects/:id', (req, res) => {
       res.status(404).send("objektet finns inte")
     }
     let myObjects = JSON.parse(data)
-    const { id } = req.params.id;
+    const { id } = req.params;
     const objects = myObjects.find((object) => object.id === id);
 
     if(!objects){
@@ -92,19 +107,7 @@ app.delete('/objects/:id', (req, res) => {
   });
 });
 
-app.get('/objects/:id', (req,res) =>{
-  fs.readFile("objekt.json", function(err,data){
-    if(err){
-      console.log(err);
-      res.status(404).send("filen finns inte")
-    }
-    const myObject = JSON.parse(data)
-    const { id } = req.params.id;
-    const findObject = myObject.find((object)=>object.id===id);
-    if(!findObject) res.status(404).send("Huset finns inte");
-    res.send(findObject);
-  });
-});
+
   
 app.listen(port, () => console.log("servern är igång"))
 
