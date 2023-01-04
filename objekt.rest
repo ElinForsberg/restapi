@@ -23,8 +23,11 @@ PUT http://localhost:3000/objects/1234567
 Content-Type: application/json
 
 {
+    "type": "villa",
+    "location": "Klong Dao",
     "bedrooms": 2,
-    "price": 3000000
+    "price": 3000000,
+    "id": "1234567"
 }
 
 ###
