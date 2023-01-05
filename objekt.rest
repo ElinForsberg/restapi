@@ -2,7 +2,7 @@ GET http://localhost:3000/objects
 
 ###
 
-GET http://localhost:3000/objects/byid/2345678
+GET http://localhost:3000/objects/byid/1234567
 
 ###
 
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/objects/1234567
+PUT  http://localhost:3000/objects/1234567
 Content-Type: application/json
 
 {

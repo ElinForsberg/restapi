@@ -26,47 +26,5 @@
     "bedrooms": 3,
     "price": 1550000,
     "id": "4567890"
-  },
-  {
-    "type": "villa",
-    "location": "Long beach",
-    "bedrooms": 1,
-    "price": 2200000,
-    "id": "5678901"
-  },
-  {
-    "type": "villa",
-    "location": "Long beach",
-    "bedrooms": 1,
-    "price": 2200000,
-    "id": "5678901"
-  },
-  {
-    "type": "villa",
-    "location": "Long beach",
-    "bedrooms": 1,
-    "price": 2200000,
-    "id": "5678901"
-  },
-  {
-    "type": "villa",
-    "location": "Long beach",
-    "bedrooms": 1,
-    "price": 2200000,
-    "id": "5678901"
-  },
-  {
-    "type": "villa",
-    "location": "Long beach",
-    "bedrooms": 1,
-    "price": 2200000,
-    "id": "5678901"
-  },
-  {
-    "type": "villa",
-    "location": "Long beach",
-    "bedrooms": 1,
-    "price": 2200000,
-    "id": "5678901"
   }
 ]

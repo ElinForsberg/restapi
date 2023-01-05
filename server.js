@@ -59,7 +59,7 @@ app.get('/objects/byid/:id', (req,res) =>{
   });
 });
 
-app.patch('/objects/:id', function(req,res){
+app.put('/objects/:id', function(req,res){
   fs.readFile("objekt.json", function(err,data){
   if(err){
     console.log(err);
