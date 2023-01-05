@@ -2,8 +2,8 @@
   {
     "type": "villa",
     "location": "Klong Dao",
-    "bedrooms": 4,
-    "price": 3600000,
+    "bedrooms": 2,
+    "price": 3000000,
     "id": "1234567"
   },
   {
@@ -26,6 +26,41 @@
     "bedrooms": 3,
     "price": 1550000,
     "id": "4567890"
+  },
+  {
+    "type": "villa",
+    "location": "Long beach",
+    "bedrooms": 1,
+    "price": 2200000,
+    "id": "5678901"
+  },
+  {
+    "type": "villa",
+    "location": "Long beach",
+    "bedrooms": 1,
+    "price": 2200000,
+    "id": "5678901"
+  },
+  {
+    "type": "villa",
+    "location": "Long beach",
+    "bedrooms": 1,
+    "price": 2200000,
+    "id": "5678901"
+  },
+  {
+    "type": "villa",
+    "location": "Long beach",
+    "bedrooms": 1,
+    "price": 2200000,
+    "id": "5678901"
+  },
+  {
+    "type": "villa",
+    "location": "Long beach",
+    "bedrooms": 1,
+    "price": 2200000,
+    "id": "5678901"
   },
   {
     "type": "villa",

@@ -59,16 +59,26 @@ app.get('/objects/byid/:id', (req,res) =>{
   });
 });
 
-app.put('/objects/:id', function(req,res){
-   
-
-    const {id}= req.params.id;
-    const data = fs.readFileSync("objekt.json");
+app.patch('/objects/:id', function(req,res){
+  fs.readFile("objekt.json", function(err,data){
+  if(err){
+    console.log(err);
+    res.status(404).send("filen finns inte")
+  }
     let myObject = JSON.parse(data);
+    const {id}= req.params;
+   
     
-    let newData = req.body;
-    myObject.push(newData);
+    const { type, location, bedrooms, price} = req.body;
+    // let newData = req.body;
+    // myObject.push(newData);
     const findObject = myObject.find((object) => object.id ===id);
+   if(!myObject) res.status(404).send("det gick inte att uppdatera");
+    if(type) findObject.type = type;
+    if(location) findObject.location = location;
+    if(bedrooms) findObject.bedrooms = bedrooms;
+    if(price) findObject.price = price;
+
 // Writing to our JSON file
 //var newData2 = JSON.stringify(myObject, null, 2);
 fs.writeFile("objekt.json", JSON.stringify(myObject,null,2), (err) => {
@@ -77,10 +87,11 @@ fs.writeFile("objekt.json", JSON.stringify(myObject,null,2), (err) => {
   console.log("data changed");
 });
        
-    res.status(200).json(findObject)
+    res.status(200).send(myObject)
    
     //res.send()
-})
+});
+});
 
 app.delete('/objects/:id', (req, res) => {
   fs.readFile("objekt.json", function (err, data){
