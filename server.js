@@ -2,10 +2,15 @@
 const express = require('express');
 const app = express();
 const port = 3000
-
+const cors = require("cors");
 const fs = require("fs");
 
 app.use(express.json())
+
+app.use(
+  cors({
+origin:"*",
+}))
 
 
 app.get('/objects', function(req,res){
@@ -92,8 +97,8 @@ fs.writeFile("objekt.json", JSON.stringify(myObject,null,2), (err) => {
 });
 });
 
-app.delete('/objects/:id', (req, res) => {
-  
+app.delete('/objects/byid/:id', (req, res) => {
+
   fs.readFile("objekt.json", function (err, data){
     if(err) {
       console.log(err);
