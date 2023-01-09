@@ -5,3 +5,4 @@ Jag har använt node.js med "dependecies" express och nodemon. Dessa behöver al
 För att installera dependecies körs npm install i terminalen.
 För att starta servern skriv npm start i terminalen så startas nodemon server.js.
 Jag har gjort fyra endpoints enligt uppgiften get, post, put och delete. Även utöver det gjort en get som endast hämtar ett objekt ur json filen. Dessa kan testas med rest client i filen objekt.rest.
+Jag valde att börja lite med VG delen, men tiden räckte inte till tyvärr. Jag har knappt kommit någonstanns med den så inte ens något du behöver titta på känner jag. Men för den så behövs cors installeras.
